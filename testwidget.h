@@ -5,9 +5,11 @@
 #include <QPainter>
 #include <stdio.h>
 
+QT_BEGIN_NAMESPACE
 namespace Ui {
     class TestWidget;
 }
+QT_END_NAMESPACE
 
 class TestWidget : public QWidget
 {
