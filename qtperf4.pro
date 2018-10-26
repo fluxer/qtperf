@@ -4,9 +4,16 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT += core
+equals(QT_MAJOR_VERSION, 5){
+    QT += widgets
+    TARGET = qtperf5
+}
+equals(QT_MAJOR_VERSION, 4) {
+    QT += gui
+    TARGET = qtperf4
+}
 
-TARGET = qtperf4
 TEMPLATE = app
 
 
