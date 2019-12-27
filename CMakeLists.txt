@@ -27,6 +27,6 @@ set(qtperf_SOURCES
 )
 
 add_executable(qtperf ${qtperf_SOURCES})
-target_link_libraries(qtperf ${KATIE_GUI_LIBRARIES})
+target_link_libraries(qtperf ${KATIE_CORE_LIBRARIES} ${KATIE_GUI_LIBRARIES})
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
