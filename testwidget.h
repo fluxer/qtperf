@@ -20,14 +20,15 @@ public:
     TestType type;
     explicit TestWidget(QWidget *parent = 0);
     void setType(TestType newtype);
+    void setNumber(const int number);
     ~TestWidget();
 protected:
     void paintEvent(QPaintEvent *);
 
 private:
+    int number;
     QPixmap duck;
     Ui::TestWidget *ui;
-    QColor randomColor();
 };
 
 #endif // TESTWIDGET_H
