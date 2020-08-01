@@ -8,6 +8,13 @@ set(CMAKE_AUTOMOC TRUE)
 set(CMAKE_AUTOUIC TRUE)
 set(CMAKE_AUTORCC TRUE)
 
+if(NOT CMAKE_BUILD_TYPE)
+    # somewhat even optimization levels by default, if build with qmake the
+    # optimization level will be 2 but with CMake it may be 3 even with
+    # release type of build
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
 find_package(Katie REQUIRED)
 
 add_definitions(${KATIE_DEFINITIONS})
